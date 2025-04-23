@@ -1,4 +1,4 @@
-# Contribuidores
+# Contribuidores.
 
 - Guarin
 - Juan Felipe
