@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenido a, QUIERES sugerir una Canción o Artista Elllll Programa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2A2A46;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .confirmation {
+      margin-top: 15px;
+      color: green;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h1><p>Icesi Music, sugerencias</p></h1>
+    <form id="suggestForm">
+      <label for="name">Tu nombre:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="suggestion">Sugerencia (canción/artista):</label>
+      <input type="text" id="suggestion" name="suggestion" required>
+
+      <label for="comment">Comentario:</label>
+      <textarea id="comment" name="comment" rows="4" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="confirmation" id="confirmationText">¡Gracias por tu sugerencia!</div>
+  </div>
+
+  <script>
+    const form = document.getElementById('suggestForm');
+    const confirmationText = document.getElementById('confirmationText');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita que la página se recargue
+      confirmationText.style.display = 'block';
+      form.reset(); // Opcional: limpia los campos después de enviar
+    });
+  </script>
+
+</body>
+</html>
